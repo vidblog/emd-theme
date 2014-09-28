@@ -1,0 +1,7 @@
+{
+  "name": "vidblog",
+  "dependencies": {
+    "bourbon": "4.0.2",
+    "neat": "1.4.0"
+  }
+}
