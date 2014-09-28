@@ -1,0 +1,13 @@
+{% capture root_url %} {{ site.root | strip_slash }} {% endcapture %}
+<!doctype html>
+<html lang="pt-br">
+  {% include head.html %}
+  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %}>
+    {% include header.html %}
+    <main role="main">
+      {{ content | expand_urls: root_url }}
+    </main>
+    {% include footer.html %}
+    {% include after_footer.html %}
+  </body>
+</html>

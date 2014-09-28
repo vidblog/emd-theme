@@ -1,0 +1,17 @@
+// Require imports
+@import ../mixins/media_queries
+@import neat
+
+// Neat vars
+$grid-columns: 12
+$gutter: 20px
+$max-width: $max-desktop-width
+
+// Grid classes
+.content
+  +outer-container
+  padding: 0 ($gutter / 2)
+  +breakpoints("tablet")
+    padding:
+      left: 10px
+      right: 10px

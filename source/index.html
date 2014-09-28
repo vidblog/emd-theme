@@ -1,0 +1,26 @@
+---
+layout: default
+index: true
+---
+
+<div id="index" class="content">
+  {% include about.html %}
+
+  {% for post in paginator.posts %}
+    {% assign content = post.content %}
+    <article class="feed-article">
+      {% include article.html %}
+    </article>
+  {% endfor %}
+
+  {% if paginator.previous_page != null or paginator.next_page != null %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a class="prev" href="{{paginator.previous_page_path}}"><</a>
+      {% endif %}
+      {% if paginator.next_page %}
+        <a class="next" href="{{paginator.next_page_path}}">></a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

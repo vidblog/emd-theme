@@ -1,0 +1,38 @@
+%post-feed
+  margin:
+    top: 70px
+    bottom: 40px
+  header
+    h1
+      margin-bottom: 32px
+      font-size: rem(45px)
+      line-height: rem(48px)
+      a
+        @extend %reset-link
+    .meta
+      display: table
+      +fill-parent
+      time
+        @extend %post-time
+      &, .categories a
+        color: $gray
+    &::after
+      +span-columns(2 of 12)
+      +shift(5)
+      content: ""
+      margin:
+        top: 22px
+        bottom: 34px
+      border-bottom: 1px solid $light-gray
+  p
+    +fill-parent
+    display: table
+
+%page-title
+  header
+    width: 120%
+    margin-left: -10%
+    text-align: center
+    h1
+      font-size: rem(55px)
+      line-height: rem(63px)

@@ -1,0 +1,27 @@
+@import ../settings/vars/md
+
+.cover-image
+  @extend %cover-image
+
+#header
+  display: table
+  width: 100%
+  height: $header-height
+  h1
+    position: fixed
+    top: 0
+    left: 0
+    margin: 20px
+    a
+      @extend %logo
+      text-decoration: none
+  h2
+    @extend %description
+    margin-top: 103px
+    +fill-parent
+
+#post,
+#page
+  #header
+    background: rgba(0, 0, 0, .5)
+    height: 85px
