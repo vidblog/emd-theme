@@ -7,9 +7,6 @@
     @extend %post-feed
     @extend %page-title
     margin-bottom: 0
-    +breakpoints("mobile")
-      +span-columns(10)
-      +shift(1)
     h2
       margin-top: 40px
       font-size: rem(36px)
@@ -21,9 +18,6 @@
     figure
       +span-columns(10 of 8)
       +shift(-1.5)
-      +breakpoints("mobile")
-        +span-columns(8 of 8)
-        +shift(0)
     figure
       @extend %unstyled
       margin:
@@ -88,6 +82,3 @@
   +span-columns(8)
   +shift(2)
   margin-top: 50px
-  +breakpoints("mobile")
-    +span-columns(10)
-    +shift(1)
