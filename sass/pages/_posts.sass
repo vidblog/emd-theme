@@ -36,20 +36,7 @@
       margin-top: 50px
       .about-author
         @extend %about-widget
-        width: 100%
-        display: table
-        margin-top: 20px
-        h3
-          margin-top: 15px
-        > img
-          float: left
-          margin-right: 10px
-          border-color: $light-gray
-        .author-description
-          margin: 10px 0
-          color: $gray
-        .social-links
-          text-align: left
+        @extend %about-widget-left
       .others-posts
         text-align: center
         margin: 35px 0 0 0
