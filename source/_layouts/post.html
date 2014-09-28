@@ -14,7 +14,8 @@ body_id: post
 
       {% include about.html %}
 
-      <p class="others-posts">
+      <h4>Leia também:</h4>
+      <div class="others-posts">
         {% if page.previous.url %}
           <a class="prev-post" href="{{page.previous.url}}" title="Post anterior: {{page.previous.title}}">
             {{page.previous.title}}
@@ -25,7 +26,7 @@ body_id: post
             {{page.next.title}}
           </a>
         {% endif %}
-      </p>
+      </div>
     </footer>
   </article>
   {{% if page.comments %}}
