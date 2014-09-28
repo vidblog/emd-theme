@@ -11,6 +11,9 @@ body_id: post
       {% unless page.sharing == false %}
         {% include post/sharing.html %}
       {% endunless %}
+
+      {% include about.html %}
+
       <p class="others-posts">
         {% if page.previous.url %}
           <a class="prev-post" href="{{page.previous.url}}" title="Post anterior: {{page.previous.title}}">

@@ -5,10 +5,43 @@
     @extend %post-feed
     @extend %page-title
     margin-bottom: 0
+    h2
+      margin-top: 40px
+      font-size: rem(36px)
+      line-height: rem(40px)
     p
       font-size: rem(20px)
       line-height: rem(30px)
+    .gist,
+    figure
+      +span-columns(10 of 8)
+      +shift(-1.5)
+    figure
+      @extend %unstyled
+      margin:
+        top: 10px
+        bottom: 10px
+      text-align: center
+      img
+        max-width: 100%
     footer
+      margin-top: 50px
+      .about-author
+        @extend %about-widget
+        width: 100%
+        display: table
+        margin-top: 20px
+        h3
+          margin-top: 15px
+        > img
+          float: left
+          margin-right: 10px
+          border-color: $light-gray
+        .author-description
+          margin: 10px 0
+          color: $gray
+        .social-links
+          text-align: left
       .others-posts
         text-align: center
         margin: 35px 0 0 0
@@ -35,6 +68,19 @@
               content: "»"
               margin-right: 3px
 
+.sharing
+  +fill-parent
+  display: table
+  &::after
+    @extend %separator
+    +span-columns(2 of 12)
+    +shift(5)
+    display: table
+    margin:
+      top: 50px
+      bottom: 20px
+
 .post-comments
   +span-columns(8)
   +shift(2)
+  margin-top: 50px
