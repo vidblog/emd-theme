@@ -16,6 +16,12 @@
     text-decoration: none
   .copyright
     +span-columns(4)
+    +breakpoints("mobile")
+      +span-columns(12)
+      text-align: center
   .powered-by
     +span-columns(8)
     text-align: right
+    +breakpoints("mobile")
+      +span-columns(12)
+      text-align: center

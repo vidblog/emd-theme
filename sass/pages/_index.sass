@@ -11,6 +11,9 @@
   .pagination
     +span-columns(8)
     +shift(2)
+    +breakpoints("mobile")
+      +span-columns(10)
+      +shift(1)
   .feed-article
     @extend %post-feed
     &:first-child

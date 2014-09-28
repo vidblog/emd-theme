@@ -7,18 +7,24 @@
   display: table
   width: 100%
   height: $header-height
+  +breakpoints("mobile")
+    height: $header-height-mobile
   h1
     position: fixed
     top: 0
     left: 0
     margin: 20px
+    +breakpoints("mobile")
+      position: absolute
     a
       @extend %logo
       text-decoration: none
   h2
     @extend %description
-    margin-top: 103px
     +fill-parent
+    margin-top: 103px
+    +breakpoints("mobile")
+      margin-top: 80px
 
 #post,
 #page

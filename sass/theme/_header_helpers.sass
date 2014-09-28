@@ -15,6 +15,8 @@
   text:
     shadow: 0 2px 5px $color-dark
     align: center
+  +breakpoints("mobile")
+    font-size: rem(30px)
 
 %cover-image
   background-image: image-url("md_cover.png")
@@ -25,3 +27,5 @@
   top: 0
   left: 0
   z-index: -1
+  +breakpoints("mobile")
+    background-size: 100% $header-height-mobile
