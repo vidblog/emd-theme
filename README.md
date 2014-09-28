@@ -1,8 +1,10 @@
 # EMD Theme for Octopress
+
 Simple theme inspired on [Medium](http://medium) layout.
 
 ## Getting Started
-On octopress (your blog) folter:
+
+On home of octopress (your blog) folder:
 ```
 $ git submodule add git@github.com:vidblog/emd-theme.git .themes/emd-theme
 $ rake install["emd-theme"]
