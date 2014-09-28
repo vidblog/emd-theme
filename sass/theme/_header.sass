@@ -7,6 +7,9 @@
   display: table
   width: 100%
   height: $header-height
+  &.internal-page
+    background: rgba(0, 0, 0, .5)
+    height: 85px
   h1
     position: fixed
     top: 0
@@ -23,9 +26,3 @@
     margin-top: 103px
     +breakpoints("mobile")
       margin-top: 80px
-
-#post,
-#page
-  #header
-    background: rgba(0, 0, 0, .5)
-    height: 85px
