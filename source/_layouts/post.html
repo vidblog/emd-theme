@@ -25,4 +25,14 @@ body_id: post
       </p>
     </footer>
   </article>
+  {{% if page.comments %}}
+    <section class="post-comments">
+      <div  class="fb-comments"
+            data-href="{{ site.url }}{{ page.url }}"
+            data-width="100%"
+            data-numposts="5"
+            data-colorscheme="light">
+      </div>
+    </section>
+  {{% endif %}}
 </div>
