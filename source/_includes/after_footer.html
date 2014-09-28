@@ -5,4 +5,24 @@
 {% unless page.index %}
   {% include facebook_like.html %}
   {% include twitter_sharing.html %}
+
+  {{% if page.comments != false and site.disqus_short_name != null %}}
+    <script type="text/javascript">
+      var disqus_shortname = '{{ site.disqus_short_name }}';
+      {% if page.comments == true %}
+        // var disqus_developer = 1;
+        var disqus_identifier = '{{ site.url }}{{ page.url }}';
+        var disqus_url = '{{ site.url }}{{ page.url }}';
+        var disqus_script = 'embed.js';
+      {% else %}
+        var disqus_script = 'count.js';
+      {% endif %}
+
+      (function () {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  {{% endif %}}
 {% endunless %}
