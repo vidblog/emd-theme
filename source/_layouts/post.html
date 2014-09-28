@@ -31,17 +31,5 @@ body_id: post
       {% endif %}
     </footer>
   </article>
-  {{% if page.comments %}}
-    <section class="post-comments">
-      <header>
-        <h2>Comentários:</h2>
-      </header>
-      <div  class="fb-comments"
-            data-href="{{ site.url }}{{ page.url }}"
-            data-width="100%"
-            data-numposts="5"
-            data-colorscheme="light">
-      </div>
-    </section>
-  {{% endif %}}
+  {% include post/comments.html %}
 </div>
