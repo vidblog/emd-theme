@@ -1,6 +1,6 @@
 # EMD Theme for Octopress
 
-Simple theme inspired on [Medium](http://medium) layout.
+Simple theme inspired on [Medium](http://medium.com) layout.
 
 ## Getting Started
 
