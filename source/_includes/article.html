@@ -21,7 +21,9 @@
     {% unless page.meta == false %}
       {% include post/date.html %}
       <span class="meta">
-        {{ time }}, {% include post/categories.html %}
+        {{ time }},
+        {% include post/categories.html %}
+        {% include post/tags.html %}
       </span>
     {% endunless %}
   </header>

@@ -1,4 +1,5 @@
 {% capture category %}{{ post.categories | size }}{% endcapture %}
+{% capture tag %}{{ post.tags | size }}{% endcapture %}
 
 <h1>
   <a href="{{ root_url }}{{ post.url }}">
@@ -9,8 +10,13 @@
 <time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>
   {{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}
 </time>
-{% if category != '0' %}
+{% if category != '0' or if tag != '0' %}
   <footer>
-    <span class="categories">Em: {{ post.categories | category_links }}</span>
+    {% if category != '0' %}
+      <span class="categories">Em: {{ post.categories | category_links }}</span>
+    {% endif %}
+    {% if tag != '0' %}
+      <span class="tags">tags: {{ post.tags | tag_links }}</span>
+    {% endif %}
   </footer>
 {% endif %}
