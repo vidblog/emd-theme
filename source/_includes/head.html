@@ -6,7 +6,7 @@
 
   {% capture image %}{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/images/{{ site.logo }}{% endif %}{% endcapture %}
 
-  {% capture title %}{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}{% endcapture %}
+  {% capture title %}{% if page.title %}{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %} - {% endif %}{{ site.title }}{% if page.index %} - {{ site.subtitle }}{% endif %}{% endcapture %}
 
   {% capture canonical %}{{ site.url }}{% if site.permalink contains ".html" %}{{ page.url }}{% else %}{{ page.url | remove:"index.html" | strip_slash }}{% endif %}{% endcapture %}
 
