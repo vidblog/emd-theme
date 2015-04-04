@@ -35,7 +35,7 @@ On `_config.yml`:
 # ----------------------- #
 
 author_description: Author Description
-gravatar_hash: [(more info)](https://gravatar.com/site/implement/images/)
+gravatar_hash: 
 logo: logo.png
 
 category_title_prefix: "Category: "
@@ -46,6 +46,8 @@ tag_meta_description_prefix: "About: "
 
 facebook_user: your_facebook_user
 ```
+
+Gravatar Hash: [(more info)](https://gravatar.com/site/implement/images/)
 
 --
 
