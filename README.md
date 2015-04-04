@@ -25,6 +25,28 @@ $ rake generate
 
 Done!
 
+## Theme Configs
+
+On `_config.yml`:
+
+```
+# ----------------------- #
+#   EMD Theme Configs     #
+# ----------------------- #
+
+author_description: Author Description
+gravatar_hash: [(more info)](https://gravatar.com/site/implement/images/)
+logo: logo.png
+
+category_title_prefix: "Category: "
+category_meta_description_prefix: "Category: "
+
+tag_title_prefix: "About: "
+tag_meta_description_prefix: "About: "
+
+facebook_user: your_facebook_user
+```
+
 --
 
 This theme is used on [Vid Blog](http://vid.blog.br).
